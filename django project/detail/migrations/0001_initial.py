@@ -15,6 +15,7 @@ class Migration(migrations.Migration):
             name='Audition',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('audition_name', models.CharField(max_length=100)),
                 ('planning_agency', models.CharField(max_length=100)),
                 ('recruitment_field', models.CharField(max_length=50)),
                 ('age_group1', models.IntegerField()),

@@ -13,7 +13,7 @@ def save_auditions_from_csv(file_path):
             gender = row[4]
             url = row[5]
             data_number = row[6]
-            
+
             # 데이터 모델 객체 생성 및 필드 값 할당
             audition_data = Audition(
                 planning_agency=planning_agency,
@@ -24,6 +24,6 @@ def save_auditions_from_csv(file_path):
                 url=url,
                 data_number=data_number
             )
-            
+
             # 객체 저장
             audition_data.save()
