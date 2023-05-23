@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Sangsi_Audition
 
-# Register your models here.
+
+admin.site.register(Sangsi_Audition)

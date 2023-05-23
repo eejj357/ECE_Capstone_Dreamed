@@ -38,9 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'jeonggi',
     'sangsi',
-    'junggi',
-    'detail',  # detail = 상시
 ]
 
 MIDDLEWARE = [
