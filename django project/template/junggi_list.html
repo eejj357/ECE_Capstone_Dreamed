@@ -148,30 +148,39 @@ function toggleSortOrder(button) { //정렬기능 구현 코드
 
 
 
-  function performSearch() {
-	// 입력된 검색어 가져오기
+  function performSearch() {  //검색기능에 검색시 나온 정보중에 진행중인 오디션 숫자를 표시하는 기능이 추가됨
 	var keyword = document.getElementById('filter_keyword').value.toLowerCase();
-  
-	// 오디션 리스트 컨테이너 가져오기
 	var auditionList = document.querySelector('.filtered_list_area');
-  
-	// 오디션 리스트 아이템들 가져오기
 	var auditions = auditionList.querySelectorAll('li');
   
-	// 검색어와 일치하는 오디션 필터링
-	auditions.forEach(function (audition) {
+	var currentDate = new Date(); // 현재 날짜 가져오기
+	var count = 0;
+  
+	auditions.forEach(function(audition) {
 	  var auditionName = audition.querySelector('.card-title.audition_name').textContent.toLowerCase();
+	  var dueDateElement = audition.querySelector('.card_desc .due_date');
+	  var dueDate = new Date(dueDateElement.textContent.trim());
+  
 	  if (auditionName.includes(keyword)) {
 		audition.style.display = 'block'; // 일치하는 오디션 보이기
+  
+		if (currentDate <=dueDate) {
+		  count++;
+		}
 	  } else {
 		audition.style.display = 'none'; // 일치하지 않는 오디션 숨기기
 	  }
 	});
+  
+	var countElement = document.getElementById('count');
+	countElement.textContent = count;
   }
   
-  
   var searchButton = document.querySelector('.btn-srch');
-  searchButton.addEventListener('click', filterAuditions);
+  searchButton.addEventListener('click', performSearch);
+
+
+
 
 
 </script>
@@ -230,9 +239,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div>
 		<h3 class="ac_tit">기획사 정기 오디션</h3>
 	</div>
-    <div class="sh_now">
-    	진행중 <span class="red">000</span> 마감임박 <span class="red">000</span>
-    </div>
+	<div class="sh_now">
+		진행중 <span id="count">0</span> 
+	</div>
 
     <div class="ac_fil_ar">
 		<div class="tit">모집 분야</div>
@@ -288,13 +297,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
 		<div class="filter_order_area">
 			<div class="filter_order_area">
-				<span class="or_each" data-val="due_date" onclick="toggleSortOrder(this)">마감일순</span>
+				<span class="or_each" data-val="due_date" onclick="toggleSortOrder(this)">마감일순</span>   <!-- 정렬용 버튼 상시에는 이름순만 넣으면 됨 -->
 				<span class="or_each" data-val="audition_name" onclick="toggleSortOrder(this)">이름순</span>						
 			  </div>
 		</div> 
 	</div>
 
-	<ul class="row card-list filtered_list_area" style="position: relative;">
+	<ul class="row card-list filtered_list_area" style="position: relative;"> 
 		{% for audition in jungi_auditions %}
 			<li class="col-6 " style="margin: 5px;">
 				<div class="card atype">
