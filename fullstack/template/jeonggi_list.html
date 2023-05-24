@@ -82,26 +82,33 @@ function toggleSortOrder(button) { //정렬기능 구현 코드
   
 	// auditions를 Array로 변환하여 정렬
 	auditions.sort(function (a, b) {
-	  var aVal = extractSortValue(a, sortBy);
-	  var bVal = extractSortValue(b, sortBy);
-  
-	  if (sortBy === 'due_date') {
-		aVal = new Date(aVal);
-		bVal = new Date(bVal);
-	  } else {
-		aVal = convertToComparable(aVal);
-		bVal = convertToComparable(bVal);
-	  }
-  
-	  if (aVal < bVal) {
-		return -1;
-	  } else if (aVal > bVal) {
-		return 1;
-	  } else {
-		return 0;
-	  }
-	});
-  
+		var aVal = extractSortValue(a, sortBy);
+		var bVal = extractSortValue(b, sortBy);
+	  
+		if (sortBy === 'due_date') {
+		  aVal = new Date(aVal);
+		  bVal = new Date(bVal);
+		  // 날짜 비교를 역순으로 변경하여 정렬
+		  if (aVal < bVal) {
+			return 1;
+		  } else if (aVal > bVal) {
+			return -1;
+		  } else {
+			return 0;
+		  }
+		} else {
+		  aVal = convertToComparable(aVal);
+		  bVal = convertToComparable(bVal);
+		  if (aVal < bVal) {
+			return -1;
+		  } else if (aVal > bVal) {
+			return 1;
+		  } else {
+			return 0;
+		  }
+		}
+	  });
+	  
 	// 정렬된 결과를 다시 표시
 	auditionList.innerHTML = '';
 	auditions.forEach(function (audition) {
