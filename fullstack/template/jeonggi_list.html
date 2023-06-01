@@ -322,9 +322,9 @@ function performSearch() {  //검색기능에 검색시 나온 정보중에 진�
         <div class="checks">
     		<input type="radio" id="tal_s_rd_1" data-sid="모두" name="gender" checked onclick="toggleFilterOption(this)">
     		<label for="tal_s_rd_1">모두 </label>
-    		<input type="radio" id="tal_s_rd_12" data-sid="여성" name="gender" onclick="toggleFilterOption(this)">
+    		<input type="radio" id="tal_s_rd_12" data-sid="여자" name="gender" onclick="toggleFilterOption(this)">
     		<label for="tal_s_rd_12">여자</label>
-            <input type="radio" id="tal_s_rd_13" data-sid="남성" name="gender" onclick="toggleFilterOption(this)">
+            <input type="radio" id="tal_s_rd_13" data-sid="남자" name="gender" onclick="toggleFilterOption(this)">
 		    <label for="tal_s_rd_13">남자</label>
 		</div>
     </div>
@@ -357,6 +357,9 @@ function performSearch() {  //검색기능에 검색시 나온 정보중에 진�
 					<div class="card-body">
 
 							<a href="{% url 'jeonggi_detail' pk=audition.pk %}"></a>
+							<div class="tit_img">
+								<img src="{{ audition.img_url}}" alt="Audition Image" >
+							</div>
 						
 						 
 						<div class="card_desc">
@@ -364,7 +367,7 @@ function performSearch() {  //검색기능에 검색시 나온 정보중에 진�
 								<div class="ac_fil_ar">
 									<div class="fil_ctg">	
 										{% for field in audition.recruitment_field|split_by_comma %}		
-											<span class="badge badge-outline active" style="min-width: 0px; font-size: 12px;">{{ field }}</span>
+											<span style="min-width: 0px; font-size: 14px;">{{ field }}</span>&nbsp;
 										{% endfor %}
 									</div>
 								</div>
@@ -388,16 +391,17 @@ function performSearch() {  //검색기능에 검색시 나온 정보중에 진�
 														나이 {{audition.age_group1}}년생 ~ {{audition.age_group2}}년생
 													{% endif %}
 												</span>
-												<p></p>
-												<span class='due_date'>
-													{{audition.due_date}}
-												</span>
+												
 											<span class="bar_ac"></span>
+											
 											<span class="data_number" style="display: none;">{{audition.data_number}}</span>
 									</div>
 								</div>
 							</a>
 							<span class="" style="display:flex;margin-top:10px;font-size:0.8rem;color:#666;">
+								<span class='due_date'>
+									{{audition.due_date}}
+								</span>
 								<div class="" style="text-align: end;flex: 1;font-size:0.8rem;">
 									{{audition.planning_agency}}
 								</div>
