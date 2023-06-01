@@ -400,7 +400,7 @@ function performSearch() {  //검색기능에 검색시 나온 정보중에 진�
 							</a>
 							<span class="" style="display:flex;margin-top:10px;font-size:0.8rem;color:#666;">
 								<span class='due_date'>
-									{{audition.due_date}}
+									{{audition.due_date |date:"Y-m-d"}}
 								</span>
 								<div class="" style="text-align: end;flex: 1;font-size:0.8rem;">
 									{{audition.planning_agency}}
