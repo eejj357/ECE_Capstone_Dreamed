@@ -10,7 +10,8 @@ class Jeonggi_Audition(models.Model):
     due_date = models.DateField() # 0000년 00월 00일
     url = models.URLField() # URL넣는곳
     data_number = models.IntegerField() # 데이터 분류용 번호
-    detail_data = models.TextField()  # 데이터 상세 정보
+    detail_data = models.TextField()  # 데이터 상세 
+    img_url=models.URLField() # img URL넣는곳
 
     class Meta:
         app_label = 'jeonggi'

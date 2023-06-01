@@ -25,6 +25,7 @@ def save_auditions_from_csv(file_path):
             url = None if row[8] == "-" else row[8]
             data_number = row[9]
             detail_data = row[7]
+            img_url=row[10]
             
             # 데이터 모델 객체 생성 및 필드 값 할당
             jeonggi_audition_data = Jeonggi_Audition(
@@ -37,7 +38,8 @@ def save_auditions_from_csv(file_path):
                 due_date=due_date,
                 url=url,
                 data_number=data_number,
-                detail_data=detail_data
+                detail_data=detail_data,
+                img_url=img_url
             )
             
             # 객체 저장
