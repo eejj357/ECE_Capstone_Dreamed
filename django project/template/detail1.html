@@ -221,41 +221,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 	
 	
-	<section class="view-sect">
-		<h3 class="h5">모집요강</h3>
-		<table class="data-table" style="word-break: break-all;">
-			<tr>
-				<td class="th">분야</td>
-				<td id="preview_category_names">
-					가수
-				</td>
-				<td class="th">연령</td>
-				<td id="preview_age_condition">
-					00년생 ~ 00년생
-				</td>
-			</tr>
-			<tr>
-				<td class="th">국적</td>				
-				<td id="preview_number_of_opening_position">
-					무관
-				</td>
-				<td class="th">성별</td>
-				<td id="preview_gender">
-					여자
-				</td>
-			</tr>
-			
-			<tr>
-				<td class="th">URL</td>
-				<td id="preview_quarantee">
-					-
-				</td>
-			</tr>
-			
-			
-			
-		</table>
-	</section>
+		<section class="view-sect">
+			<h3 class="h5">모집요강</h3>
+			<table class="data-table" style="word-break: break-all;">
+				{% for audition in auditions %}
+				<tr>
+					<td class="th">분야</td>
+					<td id="preview_category_names">
+						{{ audition.recruitment_field }}
+					</td>
+					<td class="th">연령</td>
+					<td id="preview_age_condition">
+						{{ audition.age_group1 }} - {{ audition.age_group2 }}
+					</td>
+				</tr>
+				<tr>
+					<td class="th">성별</td>
+					<td id="preview_gender">
+						{{ audition.gender }}
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="th">URL</td>
+					<td id="preview_quarantee">
+						{{ audition.url }}
+					</td>
+				</tr>
+				{% endfor %}
+			</table>
+		</section>
 	
 	<section class="view-sect">
 		<h3 class="h5">상세 정보</h3>
