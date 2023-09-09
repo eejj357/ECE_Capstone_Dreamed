@@ -1,0 +1,23 @@
+.year_input {
+    /* 연령 */
+    
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    gap: 50px;
+
+    position: static;
+    width: 250px;
+    height: 36px;
+    right: 30px;
+    top: 399px;
+
+    border: 1px solid #000000;
+    border-radius: 18px;
+}
