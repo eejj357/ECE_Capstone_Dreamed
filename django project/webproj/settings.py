@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainpage',  # mainpage = 상시
-    'mainpage2',  # mainpage2 = 정기
+    'jeonggi',
+    'sangsi',
 ]
 
 MIDDLEWARE = [

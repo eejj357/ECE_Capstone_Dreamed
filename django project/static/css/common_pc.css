@@ -5,7 +5,7 @@
 @font-face{font-family: 'NanumSquare';font-style: normal;font-weight: 400;src: url(https://static.talented.co.kr/static_data/font/NanumSquareR.woff) format("woff")}
 @font-face{font-family: 'NanumSquare';font-style: normal;font-weight: 700;src: url(https://static.talented.co.kr/static_data/font/NanumSquareB.woff) format("woff")}
 @font-face{font-family: 'NanumSquare';font-style: normal;font-weight: 900;src: url(https://static.talented.co.kr/static_data/font/NanumSquareEB.woff) format("woff")}
-/*@font-face{font-family: 'cwTeXHei';font-style: normal;font-weight: 900;src: url(https://static.talented.co.kr/static_data/font/cwTeXHei-zhonly.woff) format("woff")}*/
+/*@font-face{font-family: 'cwTeXHei';font-style: normal;font-weight: 900;src: url(https://static.talented.co.kr/static_data/font/cwTeXHei-zhonly.woff) format("woff")}
 @font-face{font-family: 'cwTeXHei';font-style: normal;font-weight: 900;src: url(https://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff) format("woff")}
 */
 
@@ -38,7 +38,7 @@
     font-weight: 600;
     font-display: swap;
     font-style: normal;
-    src: url('https://static.talented.co.kr/static_data/font/pretendard/Pretendard-SemiBold.subset.woff2') format('woff2'),url('https://static.talented.co.kr/static_data/font/pretendard/Pretendard-SemiBold.subset.woff') format('woff');
+    src: url('static/font/Pretendard-Bold.subset.woff2') format('woff2'),url('static/font/Pretendard-Bold.subset.woff') format('woff');
 }
 
 @font-face {
@@ -46,7 +46,7 @@
     font-weight: 700;
     font-display: swap;
     font-style: normal;
-    src: url('https://static.talented.co.kr/static_data/font/pretendard/Pretendard-Bold.subset.woff2') format('woff2'),url('https://static.talented.co.kr/static_data/font/pretendard/Pretendard-Bold.subset.woff') format('woff');
+    src: url('static/font/Pretendard-Bold.subset.woff2') format('woff2'),url('static/font/Pretendard-Bold.subset.woff') format('woff');
 }
 
 
@@ -331,9 +331,9 @@ button.text-link{border: 0;background: none}
 .card-info .info{flex: 1;position: relative;padding-right: 16px}
 .card-info-meta{line-height: 1.4;font-size: 18px}
 .card-info-meta:last-child{margin-bottom: 30px}
-.icon-star{position: relative;width: 24px;height: 24px;background-image: url(https://static.talented.co.kr/t_img/service_img/img_pc/icon/bookmark_btn.png);background-size: 24px;}
-[class*=icon-star], .icon-modal-ok{overflow: visible;outline: 0 !important}
-.icon-star.on{background-image: url(https://static.talented.co.kr/t_img/service_img/img_pc/icon/bookmark_btn_on.png)}
+.icon-heart{position: relative;width: 24px;height: 24px;background-image: url(static/image/heart_off.png);background-size: 24px;}
+[class*=icon-heart], .icon-modal-ok{overflow: visible;outline: 0 !important}
+.icon-heart.on{background-image: url(static/image/heart_on.png)}
 .card-info:first-child{margin-top: 0}
 .card-info .thumb{display: block;width: 168px}
 .card-info .thumb>img{width: 100%;border-radius: .5rem}
@@ -474,7 +474,7 @@ body{display: flex}
 /* Footer */
 #ft{flex-shrink: 0;background: #1f1f1f;color: #fff;z-index: 1;}
 #ft .container{max-width: 1900px;margin: 0 auto;display: flex;align-items: center;height: 190px}
-.fnb{display: flex;align-items: center;font-size: 17px;margin-left: 75px}
+.fnb{display: fixed;align-items: center;font-size: 17px;margin-left: 75px}
 .fnb a{margin-right: 35px}
 .copy{margin-left: auto;font-size: 16px;color: #666;font-weight: 700}
 
@@ -1055,7 +1055,7 @@ input:checked+.category-control-label{border-color: #323131;background-color: #3
 .acmy .card-list {margin-top: 0px;}
 
 .auca_n_st .frm-hd:before{content: '';display: block;height: 60px}
-.auca_n_st .card_desc {border: 1px solid #dcdbdb;border-radius: 0 0 1rem 1rem;padding:16px 20px 12px 20px;}
+.auca_n_st .card_desc {border: 1px solid #dcdbdb;border-radius: 1rem 1rem 1rem 1rem;padding:16px 20px 12px 20px;}
 .auca_n_st .card_desc.out {border-radius:1rem;}
 
 .atype .card-info .info {width:100%;}
@@ -1142,7 +1142,6 @@ input:checked+.category-control-label{border-color: #323131;background-color: #3
 .applicant-info .btn [class*=icon]{margin-top: -3px;width: 23px;height: 23px;background-size: 23px auto}
 .desc-inline-group{margin: 55px 0 10px;font-size: 25px}
 .desc-inline-group .desc-inline:not(:last-child){margin-right: 70px}
-.icon-heart{width: 31px;height: 26px;background-image: url(https://static.talented.co.kr/t_img/service_img/img_pc/icon/heart.png)}
 .applicant-info-meta{display: inline-flex;font-size: 20px;align-items: center;vertical-align: top;margin: 20px 0}
 .applicant-info-meta .split{content: '';display: block;height: 17px;border-left: 2px solid #e1e1e1;margin: 0 45px}
 .noitem{text-align: center;padding: 120px 0;font-weight: 900;font-size: 22px}

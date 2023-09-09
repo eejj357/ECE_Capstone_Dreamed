@@ -1,0 +1,155 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+
+<title>정기 오디션 세부 정보 - Comma</title>
+
+
+<link rel="icon" type="image/png" href="https://static.talented.co.kr/t_img/service_img/img/favicon.ico"/>
+<link rel="shortcut icon" type="image/png" href="https://static.talented.co.kr/t_img/service_img/reb/logo_td_b.png">
+<link rel="apple-touch-icon" href="https://static.talented.co.kr/t_img/service_img/reb/logo_td_b.png" />
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/common_pc.css' %}">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-52HK32R');</script>
+<!-- End Google Tag Manager -->
+
+<script type="text/javascript">
+(function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+r.type="text/javascript";
+r.integrity="sha384-5fhzC8Xw3m+x5cBag4AMKRdf900vw3AoaLty2vYfcKIX1iEsYRHZF4RLXIsu2o+F"
+r.crossOrigin="anonymous";r.async=true;
+r.src="https://cdn.amplitude.com/libs/amplitude-8.21.4-min.gz.js";
+r.onload=function(){if(!e.amplitude.runQueuedFunctions){console.log(
+"[Amplitude] Error: could not load SDK")}};var s=t.getElementsByTagName("script"
+)[0];s.parentNode.insertBefore(r,s);function i(e,t){e.prototype[t]=function(){
+this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+var o=function(){this._q=[];return this};var a=["add","append","clearAll",
+"prepend","set","setOnce","unset","preInsert","postInsert","remove"];for(
+var c=0;c<a.length;c++){i(o,a[c])}n.Identify=o;var l=function(){this._q=[];
+return this};var u=["setProductId","setQuantity","setPrice","setRevenueType",
+"setEventProperties"];for(var p=0;p<u.length;p++){i(l,u[p])}n.Revenue=l;var d=[
+"init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut",
+"setVersionName","setDomain","setDeviceId","enableTracking",
+"setGlobalUserProperties","identify","clearUserProperties","setGroup",
+"logRevenueV2","regenerateDeviceId","groupIdentify","onInit","onNewSessionStart"
+,"logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId",
+"getDeviceId","getUserId","setMinTimeBetweenSessionsMillis",
+"setEventUploadThreshold","setUseDynamicConfig","setServerZone","setServerUrl",
+"sendEvents","setLibrary","setTransport"];function v(t){function e(e){t[e
+]=function(){t._q.push([e].concat(Array.prototype.slice.call(arguments,0)))}}
+for(var n=0;n<d.length;n++){e(d[n])}}v(n);n.getInstance=function(e){e=(
+!e||e.length===0?"$default_instance":e).toLowerCase();if(
+!Object.prototype.hasOwnProperty.call(n._iq,e)){n._iq[e]={_q:[]};v(n._iq[e])}
+return n._iq[e]};e.amplitude=n})(window,document);
+
+amplitude.getInstance().init("04685bb3a64174336f2d41ffbba22982", null, {
+    includeGclid: true,
+    includeUtm: true,
+    includeReferrer: true
+});
+</script>
+
+<script>
+	function PageBack(url) {
+		window.location.href = url;
+	}
+	</script>	
+
+</head>
+
+
+<body>
+
+
+<div id="wrap">
+
+<style>
+.rk-d-pol {position: absolute;top: 51px;left: 0px;margin: auto;width: 100%;font-size: .9rem;height: 100%;padding: 0px 0px;}
+.arr-tp {text-align: center;margin: auto;width: 90%;color: #fff;padding: 0px 0;border-radius: 28px;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);background-color: #ff0037;font-size: .9rem;position: relative;height: 40px;line-height: 40px;}
+.arr-tp span::after {content: '';width: 10px;height: 10px;display: inline-block;transform: rotate(135deg);position: absolute;top: -5px;left: 47%;background-color: #ff0037;z-index: 13;}
+</style>
+
+<header id="hd">
+
+    <div class="container">
+        <h1 class="text-hide"><img src="{% static 'image/dd_logo.png' %}" width="200" alt="dreamed"></a></h1>
+        <nav id="gnb" style="min-width:600px;">
+            <a href="/정기오디션목록" class="active">정기 오디션</a>
+            <a href="/상시오디션목록">상시 오디션</a>  
+        </nav>
+    </div>
+</header>
+
+
+<div id="ct">
+<!-- 페이지 시작 -->
+<div class="post container container-sm">
+	<header class="article-hd">
+		<a href="javascript:PageBack('/정기오디션목록');" class="icon-hd-back">뒤로</a>
+		<h2 class="hd-title" id="preview_title" style="text-align: left;width: 100%;margin-right: 30px;">{{ audition.audition_name }}</h2>
+		<!-- <div class="hd-right">
+			<button type="button" class="icon-star" id="ac_info_41062" onclick="updateaucaBookmark(event);">즐겨찾기</button>
+		</div> -->
+	</header>
+	
+	
+		<div class="media media-profile sm">
+			<img src="https://static.talented.co.kr/t_img/service_img/myinfo_button2.png">
+			<div class="media-body">{{ audition.planning_agency }}</div>
+		</div>
+	
+	<section class="view-sect">
+		<h3 class="h5">모집요강</h3>
+		<table class="data-table" style="word-break: break-all;">
+			<tr>
+				<td class="th">분야</td>
+				<td id="preview_category_names">
+					{{ audition.recruitment_field }}
+				</td>
+				<td class="th">연령</td>
+				<td id="preview_age_condition">
+					{{ audition.age_group1 }}년생 ~ {{ audition.age_group2 }}년생
+				</td>
+			</tr>
+			<tr>				
+				<td class="th">성별</td>
+				<td id="preview_gender">
+					{{ audition.gender}}
+				</td>
+				<td class="th">마감일</td>
+				<td id="preview_application_period">
+					{{ audition.due_date}}
+				</td>
+			</tr>
+			
+			
+		</table>
+	</section>
+
+	
+	<section class="view-sect">
+		<h3 class="h5">상세 정보</h3>
+		<div class="content out" id="preview_detail_text" style="white-space: pre-line;">
+			{{ audition.detail_data }}
+		</div>		
+	</section>
+	
+	<div style="margin:20px 0 0 0;position:relative;">				
+		<span class="text-light" style="display:inline;float:right;cursor:pointer;" onclick="$('.sh_lay_ori_g').toggle();">
+			<a href="{{ audition.url }}">공고 원문보기</a>
+		</span>
+	</div>
+	
+</div>
+
+</body>
+</html>
