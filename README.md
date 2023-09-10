@@ -31,11 +31,12 @@
     - <img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=flat&logo=PyTorch&logoColor=white"/>
 ---
 ### 💻 Web Site
-- 정기 오디션 페이지
-  ![image](https://github.com/eejj357/ECE_Capstone_Dreamed/assets/84446424/f0999f7f-cb57-4e57-b6de-0fc49464b4b6)
-  ![image](https://github.com/eejj357/ECE_Capstone_Dreamed/assets/84446424/17013fc5-e5c3-4731-97d2-e4768dadee59)
-- 상시 오디션 페이지
-  ![image](https://github.com/eejj357/ECE_Capstone_Dreamed/assets/84446424/50236893-6f47-4db5-bd2b-6785c672ab3a)  
+#### 정기 오디션 페이지
+  ![image](https://github.com/eejj357/ECE_Capstone_Dreamed/assets/84446424/59a18fa0-a7ee-4d27-bd35-9f095deda3a2)
+  ![image](https://github.com/eejj357/ECE_Capstone_Dreamed/assets/84446424/e5f593cb-a46f-4a8b-8ba3-02ed3bed618d)
+
+#### 상시 오디션 페이지
+  ![image](https://github.com/eejj357/ECE_Capstone_Dreamed/assets/84446424/db89f1a9-6836-4d35-9a8b-89a53a04db31)  
 ---
 ### References
 - [KoChatGPT](https://github.com/airobotlab/KoChatGPT)
